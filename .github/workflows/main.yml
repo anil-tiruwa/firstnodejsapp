@@ -21,4 +21,5 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Deploy static website
-        run: aws s3 sysnc.s3://deployfirstapplication --delete
+        run: aws s3 sync . s3://deployfirstapplication --delete
+
